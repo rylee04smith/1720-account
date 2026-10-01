@@ -1,0 +1,242 @@
+/****** COLOR ******/
+:root {
+    --color-primary: #6f1bff;
+    --color-secondary: #dd22ee;
+    /* grey scale */
+    --color-greyscale-05: lab(98% 0 0);
+    --color-greyscale-10: lab(97% 0 0);
+    --color-greyscale-20: lab(91% 0 0);
+    --color-greyscale-30: lab(85% 0 0);
+    --color-greyscale-40: lab(66% 0 0);
+    --color-greyscale-50: lab(48% 0 0);
+    --color-greyscale-60: lab(34% 0 0);
+    --color-greyscale-70: lab(27% 0 0);
+    --color-greyscale-80: lab(15% 0 0);
+    --color-greyscale-90: lab(8% 0 0);
+    --color-greyscale-95: lab(5% 0 0);
+
+
+}
+
+
+/****** BORDER BOX ******/
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "instrument Sans";
+}
+
+/****** HEADER ******/
+header {
+    padding: 10px 0 10px 10px;
+    display: grid;
+    grid-template-columns: 24px auto 44px 44px;
+    align-items: end;
+    column-gap: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding-bottom: 0.5px;
+}
+
+header span {
+    color: var(--color-primary);
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+/****** Dark Mode Button ******/
+.darkbtn {
+    background: none;
+    border: none;
+    width: 44px;
+    height: 44px;
+    padding-top: 13px;
+    justify-content: center;
+}
+.darkbtn img {
+    width: 30px;
+    height: 30px;
+}
+
+/****** Dark Mode styles ******/
+.dark {
+    background-color: var(--color-greyscale-95);
+}
+.dark h2 {
+    color: var(--color-greyscale-05);
+}
+.dark footer {
+    background-color: var(--color-greyscale-90);
+}
+
+
+/****** Navigation ******/
+nav {
+    background-color: var(--color-greyscale-05);
+    display: none;
+}
+
+nav ul {
+    margin: 0;
+    list-style-type: none;
+    padding: 0;
+}
+
+nav a {
+    display: block;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--color-greyscale-40);
+    text-decoration: none;
+    padding: .85rem 10px .85rem 10px;
+}
+
+nav a:hover {
+    background-color: var(--color-greyscale-20);
+    color: var(--color-secondary);
+}
+
+nav.show {
+    display: block;
+}
+
+nav .active a {
+    color: var(--color-primary);
+}
+
+/****** HAMBURGER ******/
+.hamburger {
+    background: none;
+    border: none;
+    color: var(--color-primary);
+    cursor: pointer;
+}
+
+.hamburger::before {
+    content: "\2630";
+    font-size: 1.5rem;
+}
+
+.hamburger.show::before {
+    content: "\00d7";
+}
+
+/****** Main ******/
+h1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--color-secondary);
+    margin-left: 10px;
+}
+
+
+/****** ACCOUNT ******/
+.hide {
+    display: none;
+}
+ main section {
+    margin: .5 rem 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border: solid 1px var(--color-greyscale-50);
+ }
+
+/****** SIGNUP STYLES ******/
+.signup label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-greyscale-50);
+    display: block;
+    padding-bottom: 1rem;
+
+}
+.signup input {
+    display: block;
+   padding: .5rem 10px;
+   width: 275px;
+   border: 1px solid var(--color-greyscale-20);
+   border-radius: 4px;
+}
+.signup input[type="submit"] {
+    background-color: var(--color-primary);
+    color: var(--color-greyscale-05);
+    font-weight: 600;
+    border: none;
+    border-radius: 99px;
+    &:hover {
+        background-color: var(--color-primary);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+}
+
+    /****** Display STYLES ******/
+    .display h3 {
+        color: var(--color-greyscale-50);
+        margin: 1rem 0 0 0;
+        font-size: .8rem;
+        font-weight: 400;
+    }
+    .display p {
+        margin: 0;
+        color: var(--color-primary);
+    }
+    .display button {
+        background-color: var(--color-primary);
+        color: var(--color-greyscale-05);
+        border: none;
+        border-radius: 99px;
+        padding: .5rem;
+        margin-top: 1rem;
+        width: 260px;
+        &:hover {
+            background-color: var(--color-primary);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+    }
+
+/****** SOCIAL ******/
+.social {
+    display: flex;
+    justify-content: center;
+    column-gap: 8px;
+}
+
+.social img {
+    display: block;
+    width: 22px;
+    height: auto;
+}
+
+.social a {
+    border-radius: 50%;
+    height: 44px;
+    width: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-greyscale-10);
+}
+
+.social a:hover {
+    background-color: var(--color-greyscale-20);
+}
+
+
+/****** FOOTER ******/
+footer {
+    background-color: var(--color-greyscale-05);
+    justify-content: center;
+    padding: 1rem 0;
+    text-align: center;
+    font-weight: 200;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+}

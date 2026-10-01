@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank of Utah | DWDD1720</title>
+
+    <!-- STYLESHEETS-->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+
+    <!-- OPEN GRAPH TAGS-->
+    <meta property="og:title" content="Bank of Utah" />
+    <meta property="og:description" content="Sign into your Bank of Utah account." />
+    <meta property="og:image" content="https://rylee04smith.github.io/1720-account/images/opengraph.jpg" />
+    <meta property="og:url" content="https://rylee04smith.github.io/1720-account/" />
+    <meta property="og:logo" content="https://rylee04smith.github.io/1720-account/images/logo.svg" />
+    <meta property="og:type" content="website" />
+
+    <!-- FAV ICON -->
+    <link rel="icon" type="image/png" href="/1720-account/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/1720-account/favicon.svg" />
+    <link rel="shortcut icon" href="/1720-account/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/1720-account/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+    <link rel="manifest" href="/1720-account/site.webmanifest" />
+
+    <!--SCRIPTS-->
+    <script src="scripts/navigation.js" defer> </script>
+    <script src="scripts/year.js" defer> </script>
+    <script src="scripts/account.js" defer> </script>
+    <script src="scripts/dark.js" defer> </script>
+
+
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.svg" alt="Site Logo" width="131" height="50" loading="lazy">
+        <span>Bank of Utah</span>
+        <button id="dark" class="darkbtn"><img src="images/icon-dark.svg" alt="Dark Mode" width="22" height="22"></button>
+        <button id="hamburger" class="hamburger" aria-label="Nav Link Button"></button>
+    </header>
+
+    <nav id="nav">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li class="active"><a href="index.html">Account</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Account</h1>
+
+        <!-- new profile using form inputs and save it to local storage -->
+        <section id="signup" class="signup">
+            <h2>Create a New Profile</h2>
+            <form>
+                <label>
+                    Full Name: <input type="text" id="name" autocomplete="name" class="input" required>
+                </label>
+                <label>
+                    Phone: <input type="tel" id="phone" autocomplete="tel" class="input" required>
+                </label>
+                <label>
+                    Email: <input type="email" id="email" autocomplete="email" class="input" required>
+                </label>
+                <input class="button" type="submit" value="Create Profile">
+            </form>
+        </section>
+
+        <!-- display profile information from local storage -->
+        <section id="display" class="display">
+            <h2>Your Profile</h2>
+            <div></div>
+            <button class="button" id="delete">Delete Profile</button>
+        </section>
+
+
+
+    </main>
+
+
+
+
+    <footer>
+        <section class="social">
+            <a href="https://github.com/rylee04smith" target="_blank"><img src="images/icon-github.svg"
+                    alt="GitHub Logo" width="16" height="16"></a>
+            <a href="https://www.youtube.com/@ryleesmith-0908" target="_blank"><img src="images/icon-youtube.svg"
+                    alt="YouTube Logo" width="16" height="16"></a>
+            <a href="https://www.linkedin.com/in/ryleesmith21" target="_blank"><img src="images/icon-linkedin.svg"
+                    alt="LinkedIn Logo" width="16" height="16"></a>
+            <a href="https://www.facebook.com/rylee.smith.9674" target="_blank"><img src="images/icon-facebook.svg"
+                    alt="Facebook Logo" width="16" height="16"></a>
+        </section>
+        <p>&copy; <span id="currentyear"></span> &bull; Rylee Smith &bull; DWDD1720</p>
+    </footer>
+</body>
+
+</html>
