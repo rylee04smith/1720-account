@@ -75,6 +75,7 @@ header span {
 }
 .dark footer {
     background-color: var(--color-greyscale-90);
+    color: var(--color-greyscale05);
 }
 
 
